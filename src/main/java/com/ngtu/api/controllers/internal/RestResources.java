@@ -1,11 +1,11 @@
-package com.ecommerce.api.controllers.internal;
+package com.ngtu.api.controllers.internal;
 
 
-import com.ecommerce.api.dto.TestDTO;
-import com.ecommerce.api.dto.response.ResponseWithBody;
-import com.ecommerce.api.entities.Template;
-import com.ecommerce.api.repositories.mongo.TemplateRepository;
-import com.ecommerce.api.utils.ResponseUtil;
+import com.ngtu.api.common.dto.response.ResponseWithBody;
+import com.ngtu.api.common.utils.ResponseUtil;
+import com.ngtu.api.dto.TestDTO;
+import com.ngtu.api.entities.Template;
+import com.ngtu.api.repositories.mongo.TemplateRepository;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 import java.util.UUID;
 
-import static com.ecommerce.api.constant.CommonConstants.TRACE_ID;
+import static com.ngtu.api.common.constant.CommonConstants.TRACE_ID;
 
 @RestController
 @RequestMapping("/v1")

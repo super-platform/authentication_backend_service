@@ -26,11 +26,11 @@ spring:
       missing-topics-fatal: false
   data:
     mongodb:
-      ecommerce-template:
-        uri: mongodb://mongo:mongo123@localhost:27017/ecommerce_template?retryWrites=true&w=majority&directConnection=true&authMechanism=SCRAM-SHA-1&authSource=admin
+      ngtu-template:
+        uri: mongodb://mongo:mongo123@localhost:27017/ngtu_template?retryWrites=true&w=majority&directConnection=true&authMechanism=SCRAM-SHA-1&authSource=admin
 ###swagger
 application:
-  description: Ecommerce Template
+  description: ngtu Template
   version: 1.0
 build.date: 2023-04-24
 

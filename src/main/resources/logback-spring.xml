@@ -10,7 +10,7 @@
             </pattern>
         </encoder>
     </appender>
-    <logger name="com.ecommerce.api" level="INFO" />
+    <logger name="com.ngtu.api.common" level="INFO" />
     <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="INFO" />
     <logger name="io.opentelemetry" level="INFO" />
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">

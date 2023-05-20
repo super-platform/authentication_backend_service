@@ -1,8 +1,8 @@
-package com.ecommerce.api.configs;
+package com.ngtu.api.configs;
 
-import com.ecommerce.api.constant.ResponseCode;
-import com.ecommerce.api.dto.response.ResponseWithBody;
-import com.ecommerce.api.utils.ResponseUtil;
+import com.ngtu.api.common.constant.ResponseCode;
+import com.ngtu.api.common.dto.response.ResponseWithBody;
+import com.ngtu.api.common.utils.ResponseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

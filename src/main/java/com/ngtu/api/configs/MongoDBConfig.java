@@ -1,4 +1,4 @@
-package com.ecommerce.api.configs;
+package com.ngtu.api.configs;
 
 import org.springframework.boot.autoconfigure.mongo.MongoProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @Configuration
 @EnableMongoRepositories(
         basePackages = {
-                "com.ecommerce.api.repositories.mongo"
+                "com.ngtu.api.repositories.mongo"
         },
         mongoTemplateRef = "mongoDBTemplateTemplate"
 )
@@ -21,7 +21,7 @@ public class MongoDBConfig {
 
     @Primary
     @Bean(name = "templateProperties")
-    @ConfigurationProperties(prefix = "spring.data.mongodb.ecommerce-template")
+    @ConfigurationProperties(prefix = "spring.data.mongodb.ngtu-template")
     public MongoProperties getTemplateProps(){
         return new MongoProperties();
     }

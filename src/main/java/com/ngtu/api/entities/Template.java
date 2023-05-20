@@ -1,4 +1,4 @@
-package com.ecommerce.api.entities;
+package com.ngtu.api.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.ecommerce.api.configs;
+package com.ngtu.api.configs;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.*;

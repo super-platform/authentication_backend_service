@@ -8,10 +8,10 @@
 		<version>3.0.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ecommerce.api</groupId>
-	<artifactId>ecommerce-sale-service</artifactId>
-	<name>template</name>
-	<description>Template Project</description>
+	<groupId>com.ngtu.api</groupId>
+	<artifactId>authentication-backend-service</artifactId>
+	<name>authentication</name>
+	<description>Authentication Backend REST API</description>
 	<packaging>jar</packaging>
 	<version>1.0</version>
 	<properties>
@@ -108,8 +108,8 @@
 <!--		</dependency>-->
 
 		<dependency>
-			<groupId>com.ecommerce.api</groupId>
-			<artifactId>common-dto</artifactId>
+			<groupId>com.ngtu.api</groupId>
+			<artifactId>common</artifactId>
 			<version>1.0</version>
 		</dependency>
 	</dependencies>

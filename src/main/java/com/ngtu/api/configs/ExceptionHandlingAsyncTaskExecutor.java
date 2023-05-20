@@ -1,4 +1,4 @@
-package com.ecommerce.api.configs;
+package com.ngtu.api.configs;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

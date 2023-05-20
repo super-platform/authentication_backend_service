@@ -1,4 +1,4 @@
-package com.ecommerce.api;
+package com.ngtu.api;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
@@ -16,8 +16,8 @@ import java.util.Map;
 @SpringBootApplication
 @EnableCaching
 @Slf4j
-@ComponentScan(basePackages = {"com.ecommerce"})
-public class TemplateApplication {
+@ComponentScan(basePackages = {"com.ngtu"})
+public class AuthenticationBackendServiceApplication {
 
 	private static final String SPRING_PROFILE_DEFAULT = "spring.profiles.default";
 	private static final String SPRING_PROFILE_DEVELOPMENT = "dev";
@@ -27,7 +27,7 @@ public class TemplateApplication {
 
 	private final Environment env;
 
-	public TemplateApplication(Environment env) {
+	public AuthenticationBackendServiceApplication(Environment env) {
 		this.env = env;
 	}
 
@@ -55,7 +55,7 @@ public class TemplateApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(TemplateApplication.class);
+		SpringApplication app = new SpringApplication(AuthenticationBackendServiceApplication.class);
 
 		addDefaultProfile(app);
 

@@ -1,4 +1,4 @@
-package com.ecommerce.api.dto;
+package com.ngtu.api.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

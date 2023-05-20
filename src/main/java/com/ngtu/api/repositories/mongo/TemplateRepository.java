@@ -1,6 +1,6 @@
-package com.ecommerce.api.repositories.mongo;
+package com.ngtu.api.repositories.mongo;
 
-import com.ecommerce.api.entities.Template;
+import com.ngtu.api.entities.Template;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
