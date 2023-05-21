@@ -2,3 +2,9 @@ spring:
   config:
     activate:
       on-profile: dev
+
+
+#### SSO ####
+SSO_REALM_NAME: test
+SSO_CLIENT_ID: spotify-service
+SSO_CLIENT_SECRET: Gr04PVoitQmtLogTMhgykF7ey1dc9VDi

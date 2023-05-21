@@ -28,6 +28,23 @@ spring:
     mongodb:
       ngtu-template:
         uri: mongodb://mongo:mongo123@localhost:27017/ngtu_template?retryWrites=true&w=majority&directConnection=true&authMechanism=SCRAM-SHA-1&authSource=admin
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: ${SSO_CLIENT_ID}
+            client-secret: ${SSO_CLIENT_SECRET}
+            scope: openid
+            authorization-grant-type: authorization_code
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/auth/realms/${SSO_REALM_NAME}
+            user-name-attribute: preferred_username
+            token-uri: http://localhost:8080/realms/${SSO_REALM_NAME}/protocol/openid-connect/token
+        resource-server:
+          jwt:
+            issue-uri: http://localhost:8080/auth/realms/${SSO_REALM_NAME}
 ###swagger
 application:
   description: ngtu Template
@@ -57,5 +74,5 @@ rest:
 #        jwt:
 #          issuer-uri: https://kecloak.com
 
-keycloak:
-  enabled: false
+#keycloak:
+#  enabled: false
