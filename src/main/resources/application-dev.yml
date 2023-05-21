@@ -42,9 +42,9 @@ spring:
             issuer-uri: http://localhost:8080/auth/realms/${SSO_REALM_NAME}
             user-name-attribute: preferred_username
             token-uri: http://localhost:8080/realms/${SSO_REALM_NAME}/protocol/openid-connect/token
-        resource-server:
-          jwt:
-            issue-uri: http://localhost:8080/auth/realms/${SSO_REALM_NAME}
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/${SSO_REALM_NAME}
 ###swagger
 application:
   description: ngtu Template
