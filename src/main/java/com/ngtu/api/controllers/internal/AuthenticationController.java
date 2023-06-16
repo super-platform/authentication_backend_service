@@ -25,7 +25,7 @@ import java.util.UUID;
 import static com.ngtu.api.common.constant.CommonConstants.TRACE_ID;
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/api/v1")
 @Tag(name = "Authentication", description = "Authentication Resources API")
 @Slf4j
 @RequiredArgsConstructor
