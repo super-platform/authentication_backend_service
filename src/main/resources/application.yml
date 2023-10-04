@@ -5,6 +5,7 @@ spring:
 
 
 #### SSO ####
-SSO_REALM_NAME: test
-SSO_CLIENT_ID: spotify-service
-SSO_CLIENT_SECRET: Gr04PVoitQmtLogTMhgykF7ey1dc9VDi
+SSO_SERVER_URL: http://localhost:8080
+SSO_REALM_NAME: SUPER_APP
+SSO_CLIENT_ID: novel
+SSO_CLIENT_SECRET: DRpF1R3jOA9i4ZtxlWGKBPCCnrfHURN0

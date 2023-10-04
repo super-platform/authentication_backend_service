@@ -1,33 +1,15 @@
 server:
-  port: 8081
+  port: 8082
   servlet:
     context-path: /
 
 spring:
   application:
-    name: spring3-template
+    name: authentication-backend-service
   main:
     allow-bean-definition-overriding: true
   jpa:
     open-in-view: false
-  kafka:
-    producer:
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      bootstrap-servers:
-        - localhost:9092
-    consumer:
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      auto-offset-reset: earliest
-      bootstrap-servers:
-        - localhost:9092
-    listener:
-      missing-topics-fatal: false
-  data:
-    mongodb:
-      ngtu-template:
-        uri: mongodb://mongo:mongo123@localhost:27017/ngtu_template?retryWrites=true&w=majority&directConnection=true&authMechanism=SCRAM-SHA-1&authSource=admin
   security:
     oauth2:
       client:
@@ -39,40 +21,20 @@ spring:
             authorization-grant-type: authorization_code
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/auth/realms/${SSO_REALM_NAME}
+            issuer-uri: ${SSO_SERVER_URL}/auth/realms/${SSO_REALM_NAME}
             user-name-attribute: preferred_username
-            token-uri: http://localhost:8080/realms/${SSO_REALM_NAME}/protocol/openid-connect/token
+            token-uri: ${SSO_SERVER_URL}/realms/${SSO_REALM_NAME}/protocol/openid-connect/token
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8080/realms/${SSO_REALM_NAME}
+          issuer-uri: ${SSO_SERVER_URL}/realms/${SSO_REALM_NAME}
 ###swagger
 application:
-  description: ngtu Template
+  description: Authentication Backend Rest Api
   version: 1.0
-build.date: 2023-04-24
+build.date: 2023-10-04
 
 ###Timeout api
 rest:
   template:
-    read: 300000
-    connect: 300000
-
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          keycloak:
-#            client-id: clientId
-#            client-secret: uuid
-#            scope: openid
-#            authorization-grant-type: authorization_code
-#        provider:
-#          keycloak:
-#            issuer-uri: https://kecloak.com
-#            user-name-attribute: preferred_username
-#      resourceserver:
-#        jwt:
-#          issuer-uri: https://kecloak.com
-
-#keycloak:
-#  enabled: false
+    read: 30000
+    connect: 30000
